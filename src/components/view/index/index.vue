@@ -136,15 +136,19 @@ export default {
 	components: {postList, feedback, analysisSummary, recommandReading, tagList},
 	data () {
 		return {
-			bannerList: [
-				{
-					backgroundColor: '#3d271c',
-					imgUrl: 'https://news.720yun.com/home/o_1d6p9kq541lk117h9dr61uoe1sgc.jpg'
-				}
-			]
+			bannerList: []
 		}
 	},
 	created () {
+		this.getList()
+	},
+	methods: {
+		getList () {
+			getApiData('/moment/cache/banner')
+				.then(({content}) => {
+					this.bannerList = content
+				})
+		}
 	}
 }
 </script>
