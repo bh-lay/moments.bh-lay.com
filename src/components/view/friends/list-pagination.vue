@@ -153,7 +153,6 @@ export default {
 			friendsList: [],
 			pageInfo: {
 				total: 0,
-				current: 1,
 				size: 24
 			}
 		}
@@ -163,7 +162,7 @@ export default {
 	},
 	methods: {
 		getData () {
-			let skip = (this.pageInfo.current - 1) * this.pageInfo.size
+			let skip = (this.pageIndex - 1) * this.pageInfo.size
 			let limit = this.pageInfo.size
 			getApiData(`/moment/friend/?skip=${skip}&limit=${limit}`)
 				.then(({count, list}) => {
@@ -180,6 +179,12 @@ export default {
 		},
 		handlePageChange (index) {
 			this.$emit('update:pageIndex', index)
+		}
+	},
+	watch: {
+		pageIndex () {
+			console.log('this.pageIndex', this.pageIndex)
+			this.getData()
 		}
 	}
 }
