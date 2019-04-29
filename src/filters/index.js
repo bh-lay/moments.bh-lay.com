@@ -55,5 +55,5 @@ Vue.filter('dateDiff', dateTimeStamp => {
 })
 // 跳转链接生成
 Vue.filter('urlPrefix', url => {
-	return 'http://bh-lay.com/r/' + btoa(url)
+	return 'http://bh-lay.com/r/' + btoa(encodeURIComponent(url))
 })
