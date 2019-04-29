@@ -90,6 +90,8 @@
 
 <script>
 import postList from '@/components/post/list.vue'
+import {getApiData} from '@/assets/js/api.js'
+
 export default {
 	name: 'postPage',
 	components: {postList},
@@ -106,10 +108,7 @@ export default {
 	},
 	methods: {
 		getTagList () {
-			fetch('/api/moment/tag/', {
-				method: 'GET'
-			})
-				.then(response => response.json())
+			getApiData('/moment/tag/')
 				.then(({list}) => {
 					this.tagList = list
 				})

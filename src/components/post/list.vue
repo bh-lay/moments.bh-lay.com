@@ -175,6 +175,8 @@
 
 <script>
 import pagination from '../pagination/index.vue'
+import {getApiData} from '@/assets/js/api.js'
+
 export default {
 	name: 'post-list',
 	props: ['disablePagination', 'pageIndex', 'tag', 'friendID'],
@@ -202,17 +204,14 @@ export default {
 		forceGetData () {
 			let skip = ((this.pageIndex || 1) - 1) * this.pageInfo.size
 			let limit = this.pageInfo.size
-			let apiUrl = `/api/moment/post/?skip=${skip}&limit=${limit}`
+			let apiUrl = `/moment/post/?skip=${skip}&limit=${limit}`
 			if (this.tag) {
 				apiUrl += `&tag=${this.tag}`
 			}
 			if (this.friendID) {
 				apiUrl += `&userid=${this.friendID}`
 			}
-			fetch(apiUrl, {
-				method: 'GET'
-			})
-				.then(response => response.json())
+			getApiData(apiUrl)
 				.then(({count, list}) => {
 					this.postList = list
 					this.pageInfo.total = count

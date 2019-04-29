@@ -174,6 +174,8 @@ $avatar-width = 120px
 
 <script>
 import postList from '@/components/post/list.vue'
+import {getApiData} from '@/assets/js/api.js'
+
 export default {
 	name: 'friendDetailPage',
 	components: {postList},
@@ -194,10 +196,7 @@ export default {
 	},
 	methods: {
 		getFriendDetail () {
-			fetch(`/api/moment/friend/${this.friendID}`, {
-				method: 'GET'
-			})
-				.then(response => response.json())
+			getApiData(`/moment/friend/${this.friendID}`)
 				.then(({code, detail}) => {
 					if (detail.github_username) {
 						detail.githubLink = 'https://github.com/' + detail.github_username

@@ -142,6 +142,8 @@
 
 <script>
 import pagination from '@/components/pagination/index.vue'
+import {getApiData} from '@/assets/js/api.js'
+
 export default {
 	name: 'friendsList',
 	components: {pagination},
@@ -163,10 +165,7 @@ export default {
 		getData () {
 			let skip = (this.pageInfo.current - 1) * this.pageInfo.size
 			let limit = this.pageInfo.size
-			fetch(`/api/moment/friend/?skip=${skip}&limit=${limit}`, {
-				method: 'GET'
-			})
-				.then(response => response.json())
+			getApiData(`/moment/friend/?skip=${skip}&limit=${limit}`)
 				.then(({count, list}) => {
 					list.forEach(item => {
 						if (item.github_username) {

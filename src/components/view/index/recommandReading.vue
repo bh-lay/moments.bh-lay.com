@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import {getApiData} from '@/assets/js/api.js'
+
 export default {
 	name: 'post-list',
 	components: {},
@@ -42,10 +44,7 @@ export default {
 		}
 	},
 	created () {
-		fetch('/api/moment/cache/recommandReading', {
-			method: 'GET'
-		})
-			.then(response => response.json())
+		getApiData('/moment/cache/recommandReading')
 			.then(({content}) => {
 				this.postList = content
 			})

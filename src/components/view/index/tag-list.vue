@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import {getApiData} from '@/assets/js/api.js'
+
 export default {
 	name: 'post-list',
 	components: {},
@@ -44,10 +46,7 @@ export default {
 	},
 	methods: {
 		getTagList () {
-			fetch('/api/moment/tag/', {
-				method: 'GET'
-			})
-				.then(response => response.json())
+			getApiData('/moment/tag/')
 				.then(({list}) => {
 					this.tagList = list.map(item => item.name)
 				})
