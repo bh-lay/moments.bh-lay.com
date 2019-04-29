@@ -130,6 +130,7 @@ import recommandReading from './recommandReading.vue'
 import tagList from './tag-list.vue'
 import feedback from './feedback.vue'
 import analysisSummary from './summary.vue'
+import {getApiData} from '@/assets/js/api.js'
 
 export default {
 	name: 'index',
