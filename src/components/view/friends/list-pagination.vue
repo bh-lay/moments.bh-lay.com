@@ -125,7 +125,7 @@
 					</li>
 					<li>
 						<span>引用</span>
-						<strong>52</strong>
+						<strong>{{item.analysis ? item.analysis.postCount : 0}}</strong>
 					</li>
 				</ul>
 			</div>
