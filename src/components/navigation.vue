@@ -19,9 +19,23 @@ $nav-mini-height = 60px
 	&.mini
 		height $nav-mini-height
 .page-title
+	padding 8px
 	margin-right 50px
-	font-size 24px
-	color #eee
+	border-radius 6px
+	background #f4f4f6
+	span
+		display inline-block
+		padding 0 10px
+		line-height 24px
+		font-size 16px
+		color #679
+	strong
+		padding 0 10px
+		border-radius 4px
+		background #30304f
+		line-height 24px
+		font-size 18px
+		color #eee
 .nav-list
 	a
 		display inline-block
@@ -46,7 +60,9 @@ $nav-mini-height = 60px
 		}"
 	>
 		<div class="page-container">
-			<div class="page-title">剧中人的朋友圈</div>
+			<div class="page-title">
+				<span>剧中人的</span><strong>朋友圈</strong>
+			</div>
 			<div class="nav-list">
 				<router-link
 					v-for="nav in navList"
