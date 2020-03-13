@@ -1,21 +1,24 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 @import "~@/assets/stylus/variable.styl"
-$banner-height = 400px
+$banner-height = 650px
+.index-page
+	padding-top $navigation-height
 .banner
-	height $banner-height + $navigation-height
-	.banner-item
-		padding-top $navigation-height
+	position relative
+	.banner-list
 		height $banner-height
-	.banner-item-body
+	.banner-item
+		height $banner-height
 		height $banner-height
 		background-size cover
 		background-position center center
 		background-repeat no-repeat
 .some-tools
+	position absolute
+	left 0
+	bottom 0
+	width 100%
 	padding 30px 0
-	background #f0f1f5
-	border 1px solid #fff
-	border-width 1px 0
 	.some-tools-body
 		height 140px
 		display flex
@@ -65,29 +68,24 @@ $banner-height = 400px
 <template>
 	<div class="index-page">
 		<div class="banner">
-			<div
-				class="banner-item"
-				v-for="(banner, index) in bannerList"
-				:key="index"
-				:style="{
-					backgroundColor: banner.backgroundColor
-				}"
-			>
-				<div class="page-container">
-					<div class="banner-item-body"
-						:style="{
-							backgroundImage: `url(${banner.imgUrl})`
-						}"
-					>
-					</div>
+			<div class="banner-list">
+				<div
+					class="banner-item"
+					v-for="(banner, index) in bannerList"
+					:key="index"
+					:style="{
+						backgroundColor: banner.backgroundColor,
+						backgroundImage: `url(${banner.imgUrl})`
+					}"
+				>
 				</div>
 			</div>
-		</div>
-		<div class="some-tools">
-			<div class="page-container">
-				<div class="some-tools-body">
-					<feedback />
-					<analysisSummary />
+			<div class="some-tools">
+				<div class="page-container">
+					<div class="some-tools-body">
+						<feedback />
+						<analysisSummary />
+					</div>
 				</div>
 			</div>
 		</div>

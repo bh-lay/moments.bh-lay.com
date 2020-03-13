@@ -6,8 +6,7 @@
 	justify-content space-around
 	align-items center
 	width 200px
-	border 1px solid #e0e6eb
-	background #fff
+	background rgba(0, 0, 0, 0.3)
 	.item
 		text-align center
 		.count
@@ -15,13 +14,12 @@
 			strong
 				margin-right 5px
 				font-size 28px
-				font-weight 300
-				color #2e3038
+				color #fff
 			span
 				font-size 14px
-				color #8f93a3
+				color rgba(255, 255, 255, 0.6)
 		.title
-			color #8f93a3
+			color rgba(255, 255, 255, 0.6)
 </style>
 <template>
 	<div class="summary-count">

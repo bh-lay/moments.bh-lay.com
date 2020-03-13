@@ -5,8 +5,7 @@
 		flex-wrap wrap
 		width 300px
 		margin-right 10px
-		border 1px solid #e0e6eb
-		background #fff
+		background rgba(0, 0, 0, 0.3)
 		button
 			display block
 			width 50%
@@ -18,10 +17,10 @@
 				display block
 				margin 0 auto 6px
 				height 22px
-				fill #8f93a3
+				fill #fff
 			span
 				font-size 12px
-				color #2e3038
+				color rgba(255, 255, 255, 0.6)
 			&:first-child
 				position relative
 				&:before,
@@ -29,7 +28,7 @@
 					content ''
 					position absolute
 					display block
-					background #f0f2f5
+					background rgba(255, 255, 255, 0.1)
 				&:before
 					width 180%
 					height 1px
@@ -41,7 +40,7 @@
 					right 0
 					top 10%
 			&:hover
-				background #f6f7f8
+				background rgba(0, 0, 0, .4)
 			&:focus
 				outline none
 </style>
