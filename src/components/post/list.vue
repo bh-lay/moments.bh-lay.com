@@ -1,4 +1,6 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+@import "~@/assets/stylus/variable.styl"
+
 .post-list
 	padding 0 20px 50px 30px
 .item
@@ -103,6 +105,16 @@
 				font-size 13px
 			&:hover
 				border-color #667f99
+@media screen	and (max-width $max-phone-width)
+	.post-list
+		padding 0
+	.item
+		margin 0
+		padding 20px 0
+		.user
+			width 40px
+			height 40px
+			margin-right 10px
 </style>
 <template>
 	<div class="post-list">

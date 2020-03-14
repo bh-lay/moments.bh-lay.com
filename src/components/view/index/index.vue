@@ -5,23 +5,23 @@ $banner-height = 650px
 	padding-top $navigation-height
 .banner
 	position relative
-	.banner-list
-		height $banner-height
-	.banner-item
-		height $banner-height
-		height $banner-height
-		background-size cover
-		background-position center center
-		background-repeat no-repeat
+	background #333
+.banner-list
+	height $banner-height
+.banner-item
+	height $banner-height
+	height $banner-height
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
 .some-tools
 	position absolute
 	left 0
-	bottom 0
+	bottom 30px
 	width 100%
-	padding 30px 0
-	.some-tools-body
-		height 140px
-		display flex
+.some-tools-body
+	height 140px
+	display flex
 .index-main
 	background #fff
 .index-main-body
@@ -64,6 +64,33 @@ $banner-height = 650px
 	font-weight bold
 	color #454a54
 	background #eeeff1
+@media screen	and (max-width $max-phone-width)
+	.banner-list,
+	.banner-item
+		height 240px
+	.some-tools
+		bottom 15px
+	.some-tools-body
+		height auto
+		flex-direction column
+		.feedback,
+		.summary-count
+			width 100%
+			margin 0
+	.index-main-body
+		display block
+		.index-sidebar
+			width 100%
+			margin 0 -15px
+			padding 20px 15px 0
+			border none
+		.index-content
+			padding 0
+		.view-all-post
+			margin 10px 0
+		.index-sidebar-secondary
+			width auto
+			padding 0
 </style>
 <template>
 	<div class="index-page">

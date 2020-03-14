@@ -1,4 +1,5 @@
 <style lang="stylus" rel="stylesheet/stylus">
+@import "./assets/stylus/variable.styl"
 @import './assets/stylus/article.styl'
 html, body, div
 	margin 0
@@ -15,7 +16,7 @@ html, body, div
 	left 20px
 	z-index 2
 .page-container
-	width 80%
+	width 85%
 	max-width 1200px
 	margin auto
 @media screen	and (max-width $max-phone-width)

@@ -20,7 +20,6 @@ $nav-mini-height = 60px
 		height $nav-mini-height
 .page-title
 	padding 8px
-	margin-right 50px
 	border-radius 6px
 	background #f4f4f6
 	span
@@ -37,6 +36,9 @@ $nav-mini-height = 60px
 		font-size 18px
 		color #eee
 .nav-list
+	width 100px
+	flex-grow 1
+	text-align right
 	a
 		display inline-block
 		width 100px
@@ -51,6 +53,18 @@ $nav-mini-height = 60px
 		&.active
 			font-weight bold
 			color #0a66c2
+@media screen	and (max-width $max-phone-width)
+	.page-title
+		padding 3px 6px 3px 3px
+		span
+			font-size 13px
+		strong
+			font-size 15px
+	.nav-list a
+			width 33%
+			max-width 100px
+			text-align right
+			font-size 14px
 </style>
 <template>
 	<div

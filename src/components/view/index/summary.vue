@@ -20,6 +20,17 @@
 				color rgba(255, 255, 255, 0.6)
 		.title
 			color rgba(255, 255, 255, 0.6)
+@media screen	and (max-width $max-phone-width)
+	.summary-count
+		height 60px
+		.item
+			.count
+				strong
+					font-size 20px
+				span
+					font-size 12px
+			.title
+				font-size 12px
 </style>
 <template>
 	<div class="summary-count">

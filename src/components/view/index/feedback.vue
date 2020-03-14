@@ -1,48 +1,60 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 @import "~@/assets/stylus/variable.styl"
 .feedback
-		display flex
-		flex-wrap wrap
-		width 300px
-		margin-right 10px
-		background rgba(0, 0, 0, 0.3)
-		button
+	display flex
+	flex-wrap wrap
+	width 300px
+	margin-right 10px
+	background rgba(0, 0, 0, 0.3)
+	button
+		display block
+		width 50%
+		border none
+		background transparent
+		transition .2s
+		cursor pointer
+		svg
 			display block
-			width 50%
-			border none
-			background transparent
-			transition .2s
-			cursor pointer
-			svg
+			margin 0 auto 6px
+			height 22px
+			fill #fff
+		span
+			font-size 12px
+			color rgba(255, 255, 255, 0.6)
+		&:first-child
+			position relative
+			&:before,
+			&:after
+				content ''
+				position absolute
 				display block
-				margin 0 auto 6px
-				height 22px
-				fill #fff
-			span
-				font-size 12px
-				color rgba(255, 255, 255, 0.6)
+				background rgba(255, 255, 255, 0.1)
+			&:before
+				width 180%
+				height 1px
+				bottom 0
+				left 10%
+			&:after
+				width 1px
+				height 180%
+				right 0
+				top 10%
+		&:hover
+			background rgba(0, 0, 0, .4)
+		&:focus
+			outline none
+@media screen	and (max-width $max-phone-width)
+	.feedback
+		height 60px
+		border-bottom 1px solid rgba(255, 255, 255, .2)
+		button
+			width 25%
+			svg
+				height 20px
 			&:first-child
-				position relative
 				&:before,
 				&:after
-					content ''
-					position absolute
-					display block
-					background rgba(255, 255, 255, 0.1)
-				&:before
-					width 180%
-					height 1px
-					bottom 0
-					left 10%
-				&:after
-					width 1px
-					height 180%
-					right 0
-					top 10%
-			&:hover
-				background rgba(0, 0, 0, .4)
-			&:focus
-				outline none
+					content none
 </style>
 <template>
 	<div class="feedback">
