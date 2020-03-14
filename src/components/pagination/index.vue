@@ -97,6 +97,8 @@ export default {
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+@import "~@/assets/stylus/variable.styl"
+
 .pages-wrap
 	text-align center
 
@@ -138,4 +140,10 @@ export default {
 	text-decoration none
 	background-color #fff
 	border 1px solid #ddd
+
+@media screen	and (max-width $max-phone-width)
+	.pagination > li > a,
+	.pagination > li > span
+		padding 4px 10px
+		font-size 12px
 </style>

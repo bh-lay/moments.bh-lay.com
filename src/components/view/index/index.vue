@@ -1,5 +1,6 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 @import "~@/assets/stylus/variable.styl"
+
 $banner-height = 650px
 .index-page
 	padding-top $navigation-height

@@ -87,6 +87,33 @@
 			box-shadow: 3px 3px 30px #c1c9d7
 			.title a
 				color #0095ff
+@media screen	and (max-width $max-phone-width)
+	.friend-list
+		.list
+			margin 0 -5px
+		.item
+			width 40%
+			height auto
+			margin 0 5px 10px
+			.avatar
+				width 40px
+				height 40px
+				margin 15px auto 10px
+			.title
+				height 16px
+				margin 0
+				line-height 16px
+				a
+					font-size 16px
+			.desc
+				height auto
+				font-size 12px
+			.links
+				height 40px
+			.numbers
+				padding-bottom 15px
+				li strong
+					font-size 12px
 </style>
 <template>
 	<div class="friend-list">
