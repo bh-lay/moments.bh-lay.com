@@ -15,8 +15,13 @@ html, body, div
 	left 20px
 	z-index 2
 .page-container
-	width 1200px
+	width 80%
+	max-width 1200px
 	margin auto
+@media screen	and (max-width $max-phone-width)
+	.page-container
+		width auto
+		margin 0 15px
 .footer
 	height 400px
 	background #333
