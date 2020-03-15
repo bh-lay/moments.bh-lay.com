@@ -22,6 +22,8 @@ $avatar-width = 120px
 			background-size cover
 			box-shadow 2px 2px 10px rgba(0, 0, 0, .1)
 		.intro
+			flex-grow 1
+			width 50px
 			padding 20px
 			.title
 				margin-bottom 15px
@@ -80,7 +82,6 @@ $avatar-width = 120px
 					font-weight normal
 					font-size 20px
 					color #5c6370
-
 	.page-content
 		flex-grow 1
 		padding-top 30px
@@ -96,6 +97,39 @@ $avatar-width = 120px
 			line-height 30px
 			font-size 18px
 			color #8f9aa3
+@media screen	and (max-width $max-phone-width)
+	.header
+		.header-body
+			align-items flex-start
+			height auto
+			padding 35px 0 20px
+			.avatar
+				width 50px
+				height 50px
+				margin-bottom 5px
+				border-width 2px
+			.intro
+				padding 0 0 0 10px
+				.title
+					margin-bottom 5px
+					font-size 18px
+				.desc
+					font-size 14px
+	.page-main-body
+		display block
+		.page-sidebar
+			width auto
+			margin 0 -15px
+			padding 15px
+			border none
+			.numbers
+				margin 0
+				padding 15px 0 10px
+				li
+					span
+						font-size 12px
+					strong
+						font-size 14px
 </style>
 <template>
 	<div class="friend-detail-page">
