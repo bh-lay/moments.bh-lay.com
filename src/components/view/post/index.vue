@@ -1,6 +1,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 @import "~@/assets/stylus/variable.styl"
 .index-main
+	padding-top $navigation-height
 	background #fff
 	border 1px solid #fff
 	border-width 1px 0
@@ -10,9 +11,7 @@
 	.index-sidebar
 		width 150px
 		margin-left -1000px
-		padding-left 1000px
-		padding-top $navigation-height + 30px
-		padding-right 30px
+		padding 30px 30px 0 1000px
 		border-right 1px solid #e0e6eb
 		background #f6f7f9
 		.tag-list
@@ -45,10 +44,18 @@
 							color #2662d9
 	.index-content
 		flex-grow 1
-		padding-top $navigation-height + 30px
+		padding-top 30px
 	.index-sidebar-secondary
 		width 200px
 		padding 30px 0 50px 30px
+@media screen	and (max-width $max-phone-width)
+	.index-main-body
+		display block
+		.index-sidebar
+			width auto
+			margin 0 -15px
+			padding 15px
+			border none
 </style>
 <template>
 	<div class="post-page">
