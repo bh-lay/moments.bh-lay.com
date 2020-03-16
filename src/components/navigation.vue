@@ -63,7 +63,6 @@ $nav-mini-height = 60px
 	.nav-list a
 			width 33%
 			max-width 100px
-			text-align right
 			font-size 14px
 </style>
 <template>

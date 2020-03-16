@@ -56,6 +56,11 @@
 			margin 0 -15px
 			padding 15px
 			border none
+			.tag-list .list
+				display flex
+				flex-wrap wrap
+				a
+					padding-right 15px
 </style>
 <template>
 	<div class="post-page">
